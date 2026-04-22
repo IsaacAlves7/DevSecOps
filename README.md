@@ -88,6 +88,37 @@ Portanto, essas equipes lidam com a **segurança da informação** que trata das
 
 A **confidencialidade** trata do acesso a informação apenas para pessoas devidamente autorizadas. A **integridade** trata da veracidade da informação que não deve ser corrompida. E a **disponibilidade** que trata do acesso da informação para pessoas autorizadas sempre que forem ter necessidade.
 
+Como projetamos um sistema seguro?
+Projetar sistemas seguros é importante por diversos motivos, que vão desde proteger informações sensíveis até garantir a estabilidade e confiabilidade da infraestrutura. Como desenvolvedores, devemos projetar e implementar essas diretrizes de segurança por padrão.
+
+O diagrama abaixo é uma folha de dica pragmática com os casos de uso e pontos-chave de design.
+
+<img width="550" height="550" alt="unnamed" src="https://github.com/user-attachments/assets/bf89386e-ed5b-44e7-9816-20a81a0a93ee" />
+
+Autenticação
+
+Autorização
+
+Criptografia
+
+Vulnerabilidade
+
+Auditoria e Conformidade
+
+Segurança de Rede
+
+Segurança do Terminal
+
+Respostas de Emergência
+
+Segurança de Contêineres
+
+Segurança da API
+
+Gestão de Fornecedores de Terceiros
+
+Recuperação de Desastres
+
 ## [DevSecOps] TPM 2.0
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/10a5c8e9-1222-433a-bad4-7699bb17ecf8" align="right" height="177">
 
