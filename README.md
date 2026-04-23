@@ -121,6 +121,21 @@ Recuperação de Desastres
 
 <img width="1100" height="1100" alt="re" src="https://github.com/user-attachments/assets/f105fd77-236d-4ae1-9d8e-4898ae8e7b41" />
 
+Codificação
+A codificação converte dados para um formato diferente usando um esquema que pode ser facilmente invertido. Exemplos incluem a codificação Base64, que codifica dados binários em caracteres ASCII, facilitando a transmissão de dados por mídias projetadas para lidar com dados textuais.
+
+Codificação não é feita para proteger dados. Os dados codificados podem ser facilmente decodificados usando o mesmo esquema sem a necessidade de uma chave.
+
+Criptografia
+A criptografia envolve algoritmos complexos que utilizam chaves para transformar dados. A criptografia pode ser simétrica (usando a mesma chave para criptografia e descriptografia) ou assimétrica (usando uma chave pública para criptografia e uma chave privada para descriptografia).
+
+A criptografia é projetada para proteger a confidencialidade dos dados ao transformar dados legíveis (texto simples) em um formato ilegível (texto cifrado) usando um algoritmo e uma chave secreta. Somente aqueles com a chave correta podem descriptografar e acessar os dados originais.
+
+Tokenização
+Tokenização é o processo de substituir dados sensíveis por marcadores não sensíveis chamados tokens. O mapeamento entre os dados originais e o token é armazenado de forma segura em um cofre de tokens. Esses tokens podem ser usados em vários sistemas e processos sem expor os dados originais, reduzindo o risco de vazamentos de dados.
+
+A tokenização é frequentemente usada para proteger informações de cartão de crédito, números de identificação pessoal e outros dados sensíveis. A tokenização é altamente segura, pois os tokens não contêm nenhuma parte dos dados originais e, portanto, não podem ser reproduzidos para revelar os dados originais. É particularmente útil para conformidade com regulamentos como PCI DSS.
+
 ## [DevSecOps] TPM 2.0
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/10a5c8e9-1222-433a-bad4-7699bb17ecf8" align="right" height="177">
 
