@@ -119,6 +119,8 @@ Gestão de Fornecedores de Terceiros
 
 Recuperação de Desastres
 
+<img width="1100" height="1100" alt="re" src="https://github.com/user-attachments/assets/f105fd77-236d-4ae1-9d8e-4898ae8e7b41" />
+
 ## [DevSecOps] TPM 2.0
 <img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/10a5c8e9-1222-433a-bad4-7699bb17ecf8" align="right" height="177">
 
