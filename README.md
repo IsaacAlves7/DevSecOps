@@ -1480,6 +1480,8 @@ Em resumo, enquanto ambas as equipes podem praticar engenharia reversa, o "Red T
 À medida que o mundo digital se torna cada vez mais interligado, a segurança na Web emergiu como uma preocupação crítica tanto para empresas como para indivíduos. E só depois que sua empresa sofre um ataque é que você começa a incorporar segurança em seu fluxo de trabalho e, infelizmente, para muitas organizações, geralmente é isso que pode ser obtido. É melhor adotar uma abordagem defensiva e proativa à segurança na web do que tentar apagar o fogo de um ataque na web que já foi iniciado. Nesta postagem, exploraremos estratégias essenciais para fortalecer sua aplicação web contra ataques comuns. Espero que, ao final deste artigo, você adote uma mentalidade de segurança em seus projetos e seja infundido com uma boa dose de paranóia, especialmente como engenheiro de software.
 
 ## [Red Team] Cross-Site Scripting (XSS)
+<img width="1280" height="1668" alt="unnamed" src="https://github.com/user-attachments/assets/012c24fe-4637-400a-97ec-c8c4b53d681b" />
+
 Os ataques XSS envolvem a injeção de scripts maliciosos em páginas da web, que são então executados nos navegadores dos usuários. Simplificando, se você tiver um formulário de registro não higienizado para um blog, um usuário poderá inserir o código javascript nas tags do formulário e, quando esses dados maliciosos forem retornados ao navegador, o navegador poderá executá-los. Pode ser tão simples quanto o código abaixo ou pode ser feito para postar informações de cartão de crédito ao invasor. 
 
 [![HTML5](https://img.shields.io/badge/-index.html-000000?style=social&logo=HTML5&logoColor=orangered)](#)
@@ -1495,6 +1497,16 @@ Os ataques XSS envolvem a injeção de scripts maliciosos em páginas da web, qu
 - Empregue validação de entrada e codificação de saída: Valide e higienize as entradas do usuário para evitar a execução de scripts maliciosos.
 - Implementar Política de Segurança de Conteúdo (CSP): Defina uma política que restrinja a execução de scripts e controle o carregamento de recursos externos, reduzindo o risco de ataques XSS.
 - Utilize cabeçalhos de segurança do navegador: defina cabeçalhos de segurança apropriados, como X-XSS-Protection e X-Content-Type-Options, para instruir os navegadores a aplicar medidas de segurança e evitar problemas de interpretação de conteúdo.
+
+XSS, a prevalent vulnerability, occurs when malicious scripts are injected into web pages, often through input fields. Check out the diagram below for a deeper dive into how this vulnerability emerges when user input is improperly handled and subsequently returned to the client, leaving systems vulnerable to exploitation.
+
+Understanding the distinction between Reflective and Stored XSS is crucial. Reflective XSS involves immediate execution of the injected script, while Stored XSS persists over time, posing long-term threats. Dive into the diagrams for a comprehensive comparison of these attack vectors.
+
+Imagine this scenario: A cunning hacker exploits XSS to clandestinely harvest user credentials, such as cookies, from their browser, potentially leading to unauthorized access and data breaches. It's a chilling reality.
+
+But fret not! Our flyer also delves into effective mitigation strategies, empowering you to fortify your systems against XSS attacks. From input validation and output encoding to implementing strict Content Security Policies (CSP), we've got you covered.
+
+Over to you: How can we amplify user awareness to proactively prevent falling victim to XSS attacks? Share your insights and strategies below! Let's collaboratively bolster our web defenses and foster a safer digital environment.
 
 ## [Red Team] SQL Injection (SQLi)
 As ameaças cibernéticas não param de evoluir. As injeções de SQL (SQLi) são um tipo de ataque que usa códigos SQL maliciosos e servem para manipular bancos de dados e acessar informações sensíveis. Os ataques de SQL permitem aos hackers burlar sistemas de autenticação, roubar dados e, pior, garantem acesso root ao sistema. Aqui, vamos falar mais sobre o que são estas injeções, os riscos que elas causam e como se proteger delas da melhor forma possível.
