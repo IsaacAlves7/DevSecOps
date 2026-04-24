@@ -9,6 +9,22 @@ No passado, a segurança era "acrescentada" ao software no final do ciclo de des
 
 A segurança deve ser a prioridade de um sistema e é algo que deve ser feito da maneira correta, então se você está aqui é porque tem esse cuidado. Estar preocupado com as informações pessoais dos seus usuários, já é um sinal de que está fazendo a coisa certa. A GDPR acabou de chegar e este conteúdo é ainda mais relevante. Ainda que você tome uma boa decisão é importante saber que há um consenso geral sobre segurança: Não há sistemas totalmente seguro. 
 
+A cibersegurança é fundamental para proteger informações e sistemas contra roubos, danos e acessos não autorizados. Seja você um iniciante ou queira aprimorar suas habilidades técnicas, existem inúmeros recursos e caminhos que você pode seguir para aprender mais sobre cibersegurança. Aqui estão algumas sugestões estruturadas para ajudar você a começar ou aprofundar seus conhecimentos:
+
+Security Architecture
+
+Frameworks & Standards
+
+Application Security
+
+Risk Assessment
+
+Enterprise Risk Management
+
+Threat Intelligence
+
+Security Operation
+
 Há muitas soluções que oferecem implementações de **autenticação** e **autorização**, então nada de reinventar a roda. A menos que você tenha certeza do que está fazendo e seja em especialista em segurança, não tente criar uma implementação própria, há um ditado que diz: Criptografia feita por amadores, são criptografias amadoras. Com um pequeno ajuste, essa frase se encaixa neste cenário: Uma autenticação feita por amadores, é uma autenticação amadora.
 
 > **Autenticação** (Authentication) se trata do processo de identificação e validação de quem você é dentro de uma aplicação/sistema e o processo de autenticação geralmente feito antes da autorização. Quando você tenta inserir suas credenciais e (login) e o sistema identificá-lo este processo é chamado de autenticação `username` e `password`. Já, **Autorização** (Authorization) é o processo de o que você, usuário ou administrador autenticado, no sistema pode fazer e suas permissões para acessar os recursos. A autorização determina o que os usuários podem e não podem acessar e geralmente é feita após a autenticação bem-sucedida.
@@ -16,6 +32,9 @@ Há muitas soluções que oferecem implementações de **autenticação** e **au
 Existem técnicas de invasão da qual você não se preparou e que podem pôr seu sistema a prova, logo, está vulnerável. Utilize algum framework. De maneira geral, elas já estão maduras o suficiente. Tem uma comunidade ou empresa por trás de seu desenvolvimento.
 
 Principais características e conceitos do DevSecOps:
+
+<img width="1100" height="1100" alt="unnamed" src="https://github.com/user-attachments/assets/eea514b8-f209-4fc7-bc5f-3cbf01bff134" />
+
 
 <img src="https://user-images.githubusercontent.com/61624336/201489337-fc20acf3-24ae-4f92-b550-1daa1fcb0360.png" height="77" align="right">
 
