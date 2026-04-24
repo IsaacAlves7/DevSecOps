@@ -805,6 +805,8 @@ Confira os canais para comunicar incidentes:
 
 Você precisa participar mais das ações de segurança da informação. Visite o site seguranca.g.globo, assista aos nossos webinars na plataforma Academias Globo, participe de palestras e interaja com as nossas campanhas. Você é fundamental para a segurança da informação. Contamos com você!
 
+<img width="1554" height="1600" alt="unnamed" src="https://github.com/user-attachments/assets/d1d14110-947a-4bb9-9c43-e5900feffcc7" />
+
 # [Blue Team] DevSecOps - Secure Development
 <img src="https://user-images.githubusercontent.com/61624336/202805098-ef1b270d-bd2c-4571-b12d-e34b454c46b6.jpg" height="177" align="right">
 
