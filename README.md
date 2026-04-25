@@ -27,8 +27,25 @@ Existem técnicas de invasão da qual você não se preparou e que podem pôr se
 
 Principais características e conceitos do DevSecOps:
 
+<img width="550" height="550" alt="unnamed" src="https://github.com/user-attachments/assets/90476646-e892-47ef-bce1-63350b0331ff" />
+
 <img width="1100" height="1100" alt="unnamed" src="https://github.com/user-attachments/assets/eea514b8-f209-4fc7-bc5f-3cbf01bff134" />
 
+Introdução à Cibersegurança
+
+A Tríade da CIA
+
+Ameaças Comuns de Cibersegurança
+
+Mecanismos Básicos de DefesaPara combater essas ameaças, vários mecanismos básicos de defesa são empregados:
+
+Firewalls: Dispositivos de segurança de rede que monitoram e controlam o tráfego de entrada e saída de rede.
+
+Software Antivírus: Programas projetados para detectar e remover malware.
+
+Criptografia: O processo de converter informações em código para evitar acessos não autorizados.
+
+Estruturas de Cibersegurança
 
 <img src="https://user-images.githubusercontent.com/61624336/201489337-fc20acf3-24ae-4f92-b550-1daa1fcb0360.png" height="77" align="right">
 
