@@ -11,19 +11,13 @@ A segurança deve ser a prioridade de um sistema e é algo que deve ser feito da
 
 A cibersegurança é fundamental para proteger informações e sistemas contra roubos, danos e acessos não autorizados. Seja você um iniciante ou queira aprimorar suas habilidades técnicas, existem inúmeros recursos e caminhos que você pode seguir para aprender mais sobre cibersegurança. Aqui estão algumas sugestões estruturadas para ajudar você a começar ou aprofundar seus conhecimentos:
 
-Security Architecture
-
-Frameworks & Standards
-
-Application Security
-
-Risk Assessment
-
-Enterprise Risk Management
-
-Threat Intelligence
-
-Security Operation
+- Security Architecture
+- Frameworks & Standards
+- Application Security
+- Risk Assessment
+- Enterprise Risk Management
+- Threat Intelligence
+- Security Operation
 
 Há muitas soluções que oferecem implementações de **autenticação** e **autorização**, então nada de reinventar a roda. A menos que você tenha certeza do que está fazendo e seja em especialista em segurança, não tente criar uma implementação própria, há um ditado que diz: Criptografia feita por amadores, são criptografias amadoras. Com um pequeno ajuste, essa frase se encaixa neste cenário: Uma autenticação feita por amadores, é uma autenticação amadora.
 
