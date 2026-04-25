@@ -106,31 +106,39 @@ Projetar sistemas seguros é importante por diversos motivos, que vão desde pro
 
 O diagrama abaixo é uma folha de dica pragmática com os casos de uso e pontos-chave de design.
 
-<img width="550" height="550" alt="unnamed" src="https://github.com/user-attachments/assets/bf89386e-ed5b-44e7-9816-20a81a0a93ee" />
+<table>
+  <tr>
+    <td><img width="550" height="550" alt="unnamed" src="https://github.com/user-attachments/assets/bf89386e-ed5b-44e7-9816-20a81a0a93ee" /></td>
+    <td><img width="550" height="715" alt="unnamed" src="https://github.com/user-attachments/assets/9718b30e-bb77-4807-88f2-ba44178ee2fb" /></td>
+  </tr>
+</table>
 
-Autenticação
+DevSecOps surgiu como uma evolução natural das práticas DevOps com foco na integração da segurança no processo de desenvolvimento e implantação de software. O termo "DevSecOps" representa a convergência das práticas de Desenvolvimento (Dev), Segurança (Sec) e Operações (Ops), enfatizando a importância da segurança ao longo de todo o ciclo de vida do desenvolvimento de software.
 
-Autorização
+O diagrama abaixo mostra os conceitos importantes do DevSecOps.
 
-Criptografia
+1. Automated Security Checks
+2. Continuous Monitoring
+3. CI/CD Automation
+4. Infrastructure as Code (IaC)
+5. Container Security
+6. Secret Management
+7. Threat Modeling
+8. Quality Assurance (QA) Integration
+9. Collaboration and Communication
+10. Vulnerability Management
 
-Vulnerabilidade
-
-Auditoria e Conformidade
-
-Segurança de Rede
-
-Segurança do Terminal
-
-Respostas de Emergência
-
-Segurança de Contêineres
-
-Segurança da API
-
-Gestão de Fornecedores de Terceiros
-
-Recuperação de Desastres
+- Autenticação/Autorização
+- Criptografia
+- Vulnerabilidade
+- Auditoria e Conformidade
+- Segurança de Rede
+- Segurança do Terminal
+- Respostas de Emergência
+- Segurança de Contêineres
+- Segurança da API
+- Gestão de Fornecedores de Terceiros
+- Recuperação de Desastres
 
 <img width="1100" height="1100" alt="re" src="https://github.com/user-attachments/assets/f105fd77-236d-4ae1-9d8e-4898ae8e7b41" />
 
