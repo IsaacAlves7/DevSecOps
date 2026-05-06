@@ -1,3 +1,4 @@
+<img width="720" height="866" alt="Screenshot_20240625-131737_Instagram" src="https://github.com/user-attachments/assets/3bf1a2e6-afbb-4d2b-9299-b01017eb85aa" />
 # 🔒 DevSecOps
 <img src="https://em-content.zobj.net/source/microsoft-teams/363/locked_1f512.png" height="77" align="right">
 
@@ -22,6 +23,8 @@ A cibersegurança é fundamental para proteger informações e sistemas contra r
 Há muitas soluções que oferecem implementações de **autenticação** e **autorização**, então nada de reinventar a roda. A menos que você tenha certeza do que está fazendo e seja em especialista em segurança, não tente criar uma implementação própria, há um ditado que diz: Criptografia feita por amadores, são criptografias amadoras. Com um pequeno ajuste, essa frase se encaixa neste cenário: Uma autenticação feita por amadores, é uma autenticação amadora.
 
 <img width="720" height="1143" alt="Screenshot_20240723-211702_Instagram" src="https://github.com/user-attachments/assets/e00f8d0b-ff9b-44e9-bc33-59c74b0f8091" />
+<img width="720" height="933" alt="Screenshot_20240624-102752_Instagram" src="https://github.com/user-attachments/assets/0823ea96-af60-4d87-b0e0-14eda1eec12d" />
+<img width="720" height="866" alt="Screenshot_20240625-131737_Instagram" src="https://github.com/user-attachments/assets/4ca81d05-d5b6-49be-a5ac-173587cfb8e4" />
 
 > **Autenticação** (Authentication) se trata do processo de identificação e validação de quem você é dentro de uma aplicação/sistema e o processo de autenticação geralmente feito antes da autorização. Quando você tenta inserir suas credenciais e (login) e o sistema identificá-lo este processo é chamado de autenticação `username` e `password`. Já, **Autorização** (Authorization) é o processo de o que você, usuário ou administrador autenticado, no sistema pode fazer e suas permissões para acessar os recursos. A autorização determina o que os usuários podem e não podem acessar e geralmente é feita após a autenticação bem-sucedida.
 
