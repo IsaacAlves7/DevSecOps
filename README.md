@@ -29,6 +29,8 @@ Principais características e conceitos do DevSecOps:
 
 <img width="550" height="550" alt="unnamed" src="https://github.com/user-attachments/assets/90476646-e892-47ef-bce1-63350b0331ff" />
 
+<img width="720" height="896" alt="Screenshot_20241219-213230_Instagram" src="https://github.com/user-attachments/assets/55edbe41-a775-4d09-8f40-86101a25ba41" />
+
 <img width="1100" height="1100" alt="unnamed" src="https://github.com/user-attachments/assets/eea514b8-f209-4fc7-bc5f-3cbf01bff134" />
 
 Introdução à Cibersegurança
