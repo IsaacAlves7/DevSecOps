@@ -1,4 +1,3 @@
-<img width="720" height="866" alt="Screenshot_20240625-131737_Instagram" src="https://github.com/user-attachments/assets/3bf1a2e6-afbb-4d2b-9299-b01017eb85aa" />
 # 🔒 DevSecOps
 <img src="https://em-content.zobj.net/source/microsoft-teams/363/locked_1f512.png" height="77" align="right">
 
