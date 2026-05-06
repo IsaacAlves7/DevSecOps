@@ -289,7 +289,7 @@ Aqui está como a criptografia simétrica funciona:
 
 4. **Descriptografia**: O destinatário usa a mesma chave compartilhada para descriptografar os dados cifrados, convertendo-os de volta ao formato original.
 
-![img-2](https://github.com/IsaacAlves7/DevSecOps/assets/61624336/8f272a41-0ab3-494a-8943-913d1c46ad84)
+<img width="720" height="935" alt="FB_IMG_1732389803885" src="https://github.com/user-attachments/assets/12ed5626-0ce3-48a2-80fb-8bb80d8b57a2" />
 
 A principal vantagem da criptografia simétrica é a eficiência. Ela é mais rápida em comparação com a criptografia assimétrica (ou de chave pública), que envolve o uso de pares de chaves pública e privada. No entanto, há um desafio significativo com a criptografia simétrica: como compartilhar a chave secreta de forma segura. Se um atacante interceptar a chave durante a transmissão, toda a segurança é comprometida.
 
