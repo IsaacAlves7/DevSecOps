@@ -1,0 +1,59 @@
+package aes;
+
+import javax.crypto.Cipher;
+import javax.crypto.spec.SecretKeySpec;
+import java.util.Base64.*;
+
+//import org.apache.commons.codec.binary.Base64;
+
+/**
+ * @author netkiller
+ *
+ */
+public class ECB {
+
+	public static byte[] encrypt(byte input[], byte key[]) {
+		byte[] crypted = null;
+		try {
+		
+			SecretKeySpec skey = new SecretKeySpec(key, "AES");
+			
+			Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+			cipher.init(Cipher.ENCRYPT_MODE, skey);
+			crypted = cipher.doFinal(input);
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		java.util.Base64.Encoder encoder = java.util.Base64.getEncoder();
+		
+		return new String(encoder.encodeToString(crypted)).getBytes();
+	}
+
+	public static byte[] decrypt(byte input[], byte key[]) {
+		byte[] output = null;
+		try {
+			java.util.Base64.Decoder decoder = java.util.Base64.getDecoder();
+			SecretKeySpec skey = new SecretKeySpec(key, "AES");
+			Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+			cipher.init(Cipher.DECRYPT_MODE, skey);
+			output = cipher.doFinal(decoder.decode(input));
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
+		return new String(output).getBytes();
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String key = "mvLBiZsiTbGwrfJB";
+		String data = "ABC";
+
+		System.out.println(new String(ECB.encrypt(data.getBytes(), key.getBytes())));
+		System.out.println(new String(ECB.decrypt(ECB.encrypt(data.getBytes(), key.getBytes()), key.getBytes())));
+	}
+
+}
