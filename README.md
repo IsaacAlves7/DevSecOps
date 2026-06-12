@@ -251,6 +251,8 @@ Existem também, classificação das informações de acordo com:
 
 Existem níveis de classificação da informação com sensibilidade adotadas na empresa:
 
+<img width="720" height="447" alt="Screenshot_20241220-160855_Instagram" src="https://github.com/user-attachments/assets/acb1bc86-c76d-4561-9473-9f7d4e0a78e4" />
+
 - **Confidencial**: é sensível ou estratégica para a empresa, apenas um grupo bem pequeno de pessoas deve ter acesso a ela. O acesso não autorizado a esse tipo de informação pode gerar grandes prejuízos financeiros, penalidades previstas em leis e regularmentos e causar danos à marca e inviabilizar a continuidade do negócio relacionado a marca, um bom exemplo são com materiais inéditos, por isso é bom restringi-la a somente poucas pessoas de confiança na equipe, como líderes e gestores;
 
 - **Restrita**: é aquela que carrega algum valor, conhecimento ou relevância em torno de um tema. O acesso não autorizado a ela pode impactar uma ou mais áreas e gerar perda de competitividade para a empresa, por isso ela deve ser limitada as equipes e aos grupos de trabalho, um bom exemplo são informações sobre projetos;
