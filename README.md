@@ -1,3 +1,5 @@
+> Versículo chave: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." - Provérbios 16:3
+
 # 🔒 DevSecOps
 <img src="https://em-content.zobj.net/source/microsoft-teams/363/locked_1f512.png" height="77" align="right">
 
