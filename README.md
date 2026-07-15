@@ -154,6 +154,8 @@ DevSecOps surgiu como uma evolução natural das práticas DevOps com foco na in
 
 O diagrama abaixo mostra os conceitos importantes do DevSecOps.
 
+<img width="2560" height="1338" alt="ssdlc-2" src="https://github.com/user-attachments/assets/331e55e3-9a83-43ca-abec-7d8810417813" />
+
 1. Automated Security Checks
 2. Continuous Monitoring
 3. CI/CD Automation
@@ -164,12 +166,6 @@ O diagrama abaixo mostra os conceitos importantes do DevSecOps.
 8. Quality Assurance (QA) Integration
 9. Collaboration and Communication
 10. Vulnerability Management
-
-<img width="720" height="899" alt="Screenshot_20240621-211417_Instagram" src="https://github.com/user-attachments/assets/74e07b9a-4ebf-4959-9a18-b9d9d2963505" />
-<img width="720" height="898" alt="Screenshot_20240621-211406_Instagram" src="https://github.com/user-attachments/assets/0ab7566a-0d90-4052-ac3c-498be897a31d" />
-<img width="720" height="902" alt="Screenshot_20240621-211404_Instagram" src="https://github.com/user-attachments/assets/8e5ea186-3e9f-4ec4-9a7e-982f36bb0882" />
-<img width="720" height="897" alt="Screenshot_20240621-211421_Instagram" src="https://github.com/user-attachments/assets/c18a1156-3d11-438e-9855-085d240ecd78" />
-<img width="720" height="899" alt="Screenshot_20240621-211419_Instagram" src="https://github.com/user-attachments/assets/9cf5a1e1-1ebf-4009-ab68-434c5567c2f8" />
 
 - Autenticação/Autorização
 - Criptografia
