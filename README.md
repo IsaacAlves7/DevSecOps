@@ -775,8 +775,6 @@ O Blue Team lida diretamente com desenvolvimento seguro, segurança de aplicaç�
 
 Em resumo, o Desenvolvimento Seguro se concentra na criação de software seguro desde o início, a Segurança de Aplicação aborda a proteção de aplicativos específicos e a Segurança da Informação lida com a proteção de informações em um contexto mais amplo. Todas essas disciplinas são fundamentais para garantir a segurança cibernética e proteger sistemas, aplicativos e dados contra ameaças cada vez mais sofisticadas.
 
-<img src="https://github.com/IsaacAlves7/DevSecOps/assets/61624336/c7eba071-265e-49d9-8b61-7ff55764fcb0" align="right" height="177">
-
 Muitas empresas que possuem blue team utilizam a metodologia **PbD - Privacy by Design** (Privacidade por Design) que é um princípio de proteção de dados que enfatiza a integração de medidas de privacidade desde o início do design e desenvolvimento de produtos, sistemas e serviços. A ideia por trás do Privacy by Design é que a privacidade dos dados que deve ser considerada como parte integrante de qualquer novo projeto, em vez de ser uma consideração secundária ou uma correção posterior.
 
 Alguns dos princípios e componentes-chave do Privacy by Design incluem:
