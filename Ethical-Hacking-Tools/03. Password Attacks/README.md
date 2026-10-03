@@ -1,4 +1,4 @@
-## Password Attacks
+# 🔐 Password Attacks
 
 * [brutespray](https://tools.kali.org/password-attacks/brutespray)&nbsp;&nbsp;&nbsp;[![](https://raw.githubusercontent.com/hhhrrrttt222111/Ethical-Hacking-Tools/master/0/github.png?token=AKLVDP4M2RTUFTJVE5QLRV26WYYCE)](https://github.com/x90skysn3k/brutespray)&nbsp;&nbsp;&nbsp; [![watch](https://raw.githubusercontent.com/hhhrrrttt222111/Ethical-Hacking-Tools/master/0/yt.png?token=AKLVDPY5647PJVN6MSLDOHS6WYYGY)](https://www.youtube.com/watch?v=Fi3YkvVfgxw)
 ``` 
@@ -195,3 +195,229 @@ truecrack --help
 ``` 
 credking.py -h
 ```
+
+Tenho arquivos `.rar` separados em 12 partições e eles estão encriptados por senha, no caso eu esqueci a senha por negligência, e desejo descobrir a senha, monte pra mim um programa em python que realiza essa tarefa.
+
+Recuperação de Senha de Arquivos RAR:
+
+Vou te ajudar a montar um script Python para tentar recuperar a senha. **Antes disso, um aviso importante:**
+
+⚠️ **Use apenas em arquivos seus.** Tentar quebrar senhas de arquivos de terceiros é ilegal.
+
+Pré-requisitos:
+
+```bash
+pip install rarfile
+```
+
+E você precisa ter o **WinRAR** ou **unrar** instalado no sistema (o `rarfile` precisa do executável `unrar` para testar senhas).
+
+- **Windows:** instale o WinRAR (ele fornece `UnRAR.exe`)
+- **Linux:** `sudo apt install unrar`
+- **macOS:** `brew install unrar`
+
+Script 1: Ataque por Dicionário (recomendado)
+
+Este é o método mais rápido e eficaz. Você fornece uma lista de palavras (wordlist) e o script testa cada uma.
+
+```python
+import rarfile
+import os
+import sys
+import time
+
+# ============ CONFIGURAÇÕES ============
+ARQUIVO_RAR = "arquivo.part1.rar"   # primeira partição
+WORDLIST    = "wordlist.txt"        # uma senha por linha
+# =======================================
+
+# Informe o caminho do unrar se necessário (Windows geralmente detecta sozinho)
+# rarfile.UNRAR_TOOL = r"C:\Program Files\WinRAR\UnRAR.exe"
+
+def testar_senha(rf, senha):
+    try:
+        rf.setpassword(senha)
+        # testar apenas o primeiro arquivo é suficiente para validar a senha
+        info = rf.infolist()[0]
+        rf.open(info).read(1)
+        return True
+    except rarfile.BadRarFile:
+        return False
+    except rarfile.RarWrongPassword:
+        return False
+    except Exception:
+        return False
+
+def ataque_dicionario():
+    if not os.path.exists(ARQUIVO_RAR):
+        print(f"[!] Arquivo não encontrado: {ARQUIVO_RAR}")
+        return None
+    if not os.path.exists(WORDLIST):
+        print(f"[!] Wordlist não encontrada: {WORDLIST}")
+        return None
+
+    rf = rarfile.RarFile(ARQUIVO_RAR)
+    total = sum(1 for _ in open(WORDLIST, encoding="utf-8", errors="ignore"))
+    print(f"[*] Testando {total} senhas...")
+
+    inicio = time.time()
+    with open(WORDLIST, encoding="utf-8", errors="ignore") as f:
+        for i, linha in enumerate(f, 1):
+            senha = linha.rstrip("\n\r")
+            if not senha:
+                continue
+            if testar_senha(rf, senha):
+                print(f"\n[+] SENHA ENCONTRADA: {senha}")
+                return senha
+            if i % 200 == 0:
+                decorrido = time.time() - inicio
+                velocidade = i / decorrido if decorrido > 0 else 0
+                print(f"    {i}/{total} ({velocidade:.0f} senhas/s) - atual: {senha[:30]!r}")
+
+    print("\n[-] Senha não encontrada na wordlist.")
+    return None
+
+if __name__ == "__main__":
+    ataque_dicionario()
+```
+
+Script 2: Ataque de Força Bruta (para senhas curtas)
+
+Só é viável para senhas **muito curtas** (até ~6 caracteres). O RAR usa criptografia forte, então 1000 tentativas/s já é otimista.
+
+```python
+import rarfile
+import itertools
+import string
+import time
+
+ARQUIVO_RAR = "arquivo.part1.rar"
+CARACTERES  = string.ascii_letters + string.digits      # a-z A-Z 0-9
+TAMANHO_MAX = 6
+# rarfile.UNRAR_TOOL = r"C:\Program Files\WinRAR\UnRAR.exe"
+
+def testar_senha(rf, senha):
+    try:
+        rf.setpassword(senha)
+        info = rf.infolist()[0]
+        rf.open(info).read(1)
+        return True
+    except Exception:
+        return False
+
+def forca_bruta():
+    rf = rarfile.RarFile(ARQUIVO_RAR)
+    inicio = time.time()
+    contador = 0
+    for tamanho in range(1, TAMANHO_MAX + 1):
+        print(f"[*] Testando senhas de {tamanho} caractere(s)...")
+        for combo in itertools.product(CARACTERES, repeat=tamanho):
+            senha = "".join(combo)
+            contador += 1
+            if testar_senha(rf, senha):
+                print(f"\n[+] SENHA ENCONTRADA: {senha}")
+                return senha
+            if contador % 500 == 0:
+                vel = contador / (time.time() - inicio)
+                print(f"    {contador} tentativas ({vel:.0f}/s) - atual: {senha}")
+    print("\n[-] Não encontrada.")
+    return None
+
+if __name__ == "__main__":
+    forca_bruta()
+```
+
+Script 3: Ataque Híbrido com Máscara
+
+Se você lembra parcialmente da senha (ex: `empresa2023XXXX`), use máscara:
+
+```python
+import rarfile
+import itertools
+
+ARQUIVO_RAR = "arquivo.part1.rar"
+# ?d = dígito, ?l = minúscula, ?u = maiúscula, ?s = símbolo
+MASCARA = "empresa2023?d?d?d?d"
+
+def expandir_mascara(mask):
+    grupos = {
+        "?d": "0123456789",
+        "?l": "abcdefghijklmnopqrstuvwxyz",
+        "?u": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        "?s": "!@#$%&*()-_=+",
+    }
+    partes = []
+    i = 0
+    while i < len(mask):
+        if mask[i:i+2] in grupos:
+            partes.append(grupos[mask[i:i+2]])
+            i += 2
+        else:
+            partes.append(mask[i])
+            i += 1
+    return partes
+
+def testar(rf, senha):
+    try:
+        rf.setpassword(senha)
+        rf.open(rf.infolist()[0]).read(1)
+        return True
+    except Exception:
+        return False
+
+def ataque_mascara():
+    rf = rarfile.RarFile(ARQUIVO_RAR)
+    partes = expandir_mascara(MASCARA)
+    total = 1
+    for p in partes:
+        total *= len(p)
+    print(f"[*] {total} combinações a testar...")
+    for combo in itertools.product(*partes):
+        senha = "".join(combo)
+        if testar(rf, senha):
+            print(f"[+] SENHA: {senha}")
+            return senha
+    print("[-] Não encontrada.")
+    return None
+
+if __name__ == "__main__":
+    ataque_mascara()
+```
+
+Estratégia recomendada (na ordem):
+
+1. **Lembre-se de variações** que você costuma usar — crie uma wordlist manual com:
+   - Senhas antigas que você já usou
+   - Nomes + datas (nascimento, casamento, etc.)
+   - Placas de carro, apelidos, times
+   - Variações com `!`, `123`, `@` no final, maiúsculas alternadas
+
+2. **Use wordlists prontas** (coloque em `wordlist.txt`):
+   - [rockyou.txt](https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt) (14M senhas)
+   - [SecLists](https://github.com/danielmiessler/SecLists)
+   - Wordlists em português do GitHub
+
+3. **Use regras de mutação** (ex: `senha` → `Senha123!`). A ferramenta **Hashcat** com modo `-m 13000` (RAR5) ou `-m 12500` (RAR3) é **centenas de vezes mais rápida** que Python — recomendo fortemente se o dicionário for grande.
+
+4. **Máscara híbrida** se lembrar parte da senha.
+
+**Alternativas muito mais rápidas que Python**: Se o dicionário for grande (>100 mil senhas), Python vai ser lento. Prefira:
+
+- **Hashcat**: extraia o hash com `rar2john` (do pacote John the Ripper) e use GPU.
+  ```bash
+  rar2john arquivo.part1.rar > hash.txt
+  hashcat -m 13000 -a 0 hash.txt rockyou.txt
+  ```
+- **John the Ripper**:
+  ```bash
+  rar2john arquivo.part1.rar > hash.txt
+  john --wordlist=rockyou.txt hash.txt
+  ```
+
+Dicas finais:
+
+- **Teste apenas na part1.rar** — as outras partições são validadas juntas automaticamente.
+- Se você **não faz ideia** da senha e ela tem 8+ caracteres aleatórios, a recuperação é **computacionalmente inviável** (RAR usa AES-256 com derivação PBKDF2 pesada).
+- Faça backup das partições antes de rodar qualquer ferramenta.
+
+Quer que eu adapte o script para um caso específico seu (ex: você lembra que a senha tem X caracteres, ou começa com determinada palavra)?
