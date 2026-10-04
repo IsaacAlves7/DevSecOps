@@ -196,13 +196,16 @@ truecrack --help
 credking.py -h
 ```
 
+## Descriptografia de partições de arquivos Rar/Zip
 Tenho arquivos `.rar` separados em 12 partições e eles estão encriptados por senha, no caso eu esqueci a senha por negligência, e desejo descobrir a senha, monte pra mim um programa em python que realiza essa tarefa.
 
-Recuperação de Senha de Arquivos RAR:
+Recuperação de Senha de Arquivos RAR: Vou te ajudar a montar um script Python para tentar recuperar a senha. **Antes disso, um aviso importante:**
 
-Vou te ajudar a montar um script Python para tentar recuperar a senha. **Antes disso, um aviso importante:**
+> [!Warning]
+> Fique atento a nomenclatura do arquivo, pois nomes diferentes quebram o fluxo das partições ao descriptografar.
 
-⚠️ **Use apenas em arquivos seus.** Tentar quebrar senhas de arquivos de terceiros é ilegal.
+> [!Caution]
+> ⚠️ **Use apenas em arquivos seus.** Tentar quebrar senhas de arquivos de terceiros é ilegal.
 
 Pré-requisitos:
 
